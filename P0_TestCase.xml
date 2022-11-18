@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="com.android.genericLibrary.ListenersImpClass"></listener>
+		<listener class-name="com.android.genericLibrary.ExtentReporterNG"></listener>
+		<listener class-name="com.android.genericLibrary.RetryAnalyser"></listener>
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="Priority0.P0_LoginModule_Test" />
+			<class name="Priority0.P0_HomeScreen_Test" />
+			<class name="Priority0.P0_OnBoarding_Test" />
+			<class name="Priority0.P0_CameraFunctions_Test" />
+			<class name="Priority0.P0_VideosTab_Test" />
+			<class name="Priority0.P0_AccountTab_Test" />
+			<class name="Priority0.P0_SubscriptionPayment_Test" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

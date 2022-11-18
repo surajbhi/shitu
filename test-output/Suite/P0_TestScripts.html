@@ -1,0 +1,698 @@
+<html>
+<head>
+<title>TestNG:  P0_TestScripts</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>P0_TestScripts</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>39/1/5</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Aug 03 22:59:46 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>3444 seconds (3444685 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.errorMessageCamTest()'><b>errorMessageCamTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1702830019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1702830019'><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>51</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.continueDisableOtpTest()'><b>continueDisableOtpTest</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td></td>
+<td>23</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.enterSerialNUmDidplayTest()'><b>enterSerialNUmDidplayTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>46</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_CameraFunctions_Test.flipCameraTest()'><b>flipCameraTest</b><br>Test class: Priority.P0_CameraFunctions_Test</td>
+<td></td>
+<td>57</td>
+<td>Priority.P0_CameraFunctions_Test@35b74c5c</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.backToHomeTest()'><b>backToHomeTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>50</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.errrorMessageTest()'><b>errrorMessageTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>64</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.wrongOtpTest()'><b>wrongOtpTest</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td></td>
+<td>23</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.navigateBlinkingPageTest()'><b>navigateBlinkingPageTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>58</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_AccountTab_Test.appVersionTest()'><b>appVersionTest</b><br>Test class: Priority.P0_AccountTab_Test</td>
+<td></td>
+<td>49</td>
+<td>Priority.P0_AccountTab_Test@3576ddc2</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.userSelectDeviceModelTest()'><b>userSelectDeviceModelTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>62</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.previousIconTest()'><b>previousIconTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>74</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.clearAllFilterTest()'><b>clearAllFilterTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>78</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second()'><b>resendOtpEnableAfter30Second</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td></td>
+<td>128</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_CameraFunctions_Test.sleepModeTest()'><b>sleepModeTest</b><br>Test class: Priority.P0_CameraFunctions_Test</td>
+<td></td>
+<td>72</td>
+<td>Priority.P0_CameraFunctions_Test@35b74c5c</td></tr>
+<tr>
+<td title='Priority.P0_SubscriptionPaymentTest.monthlySubscription()'><b>monthlySubscription</b><br>Test class: Priority.P0_SubscriptionPaymentTest</td>
+<td></td>
+<td>81</td>
+<td>Priority.P0_SubscriptionPaymentTest@2e570ded</td></tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.continueDisableMobNumTest()'><b>continueDisableMobNumTest</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td></td>
+<td>19</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_SubscriptionPaymentTest.yearSubscription()'><b>yearSubscription</b><br>Test class: Priority.P0_SubscriptionPaymentTest</td>
+<td></td>
+<td>106</td>
+<td>Priority.P0_SubscriptionPaymentTest@2e570ded</td></tr>
+<tr>
+<td title='Priority.P0_HomeScreen_Test.gridPauseStateTest()'><b>gridPauseStateTest</b><br>Test class: Priority.P0_HomeScreen_Test</td>
+<td></td>
+<td>89</td>
+<td>Priority.P0_HomeScreen_Test@33f676f6</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.cofigureNotExitTest()'><b>cofigureNotExitTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>101</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.cameraDeleteAndOnboadrTest()'><b>cameraDeleteAndOnboadrTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>96</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.filterRemovelTest()'><b>filterRemovelTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>51</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_CameraFunctions_Test.cameraControlsTest()'><b>cameraControlsTest</b><br>Test class: Priority.P0_CameraFunctions_Test</td>
+<td></td>
+<td>148</td>
+<td>Priority.P0_CameraFunctions_Test@35b74c5c</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.scanFailedErrorTest()'><b>scanFailedErrorTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>91</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.numericValuesTest()'><b>numericValuesTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>54</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.videoPlayTest()'><b>videoPlayTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>61</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_CameraFunctions_Test.invalidVerificationCodeTest()'><b>invalidVerificationCodeTest</b><br>Test class: Priority.P0_CameraFunctions_Test</td>
+<td></td>
+<td>49</td>
+<td>Priority.P0_CameraFunctions_Test@35b74c5c</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.videoDisplayByDateTest()'><b>videoDisplayByDateTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>47</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.loginPageTest()'><b>loginPageTest</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td></td>
+<td>13</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.progressBarTest()'><b>progressBarTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>71</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.nextVideoPlayTest()'><b>nextVideoPlayTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>68</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.killAppTest()'><b>killAppTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>73</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.allowPermissionTest()'><b>allowPermissionTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>59</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.durationTest()'><b>durationTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>105</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.backToLoginPageTest()'><b>backToLoginPageTest</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td></td>
+<td>21</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.sitRelaxVisibleTest()'><b>sitRelaxVisibleTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>71</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.noVideoRecordedTest()'><b>noVideoRecordedTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>54</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_HomeScreen_Test.loginPageTest()'><b>loginPageTest</b><br>Test class: Priority.P0_HomeScreen_Test</td>
+<td></td>
+<td>47</td>
+<td>Priority.P0_HomeScreen_Test@33f676f6</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.withoutWifiScanTest()'><b>withoutWifiScanTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td></td>
+<td>76</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_VideosTab_Test.shareDownloadTest()'><b>shareDownloadTest</b><br>Test class: Priority.P0_VideosTab_Test</td>
+<td></td>
+<td>69</td>
+<td>Priority.P0_VideosTab_Test@264f218</td></tr>
+<tr>
+<td title='Priority.P0_AccountTab_Test.priceForPlans()'><b>priceForPlans</b><br>Test class: Priority.P0_AccountTab_Test</td>
+<td></td>
+<td>110</td>
+<td>Priority.P0_AccountTab_Test@3576ddc2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second()'><b>resendOtpEnableAfter30Second</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LTA1Q5SAYJ&apos;, ip: &apos;192.168.43.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, deviceName: vivo 1820, fullReset: false, newCommandTimeout: 60, noReset: false, platformName: android}, deviceApiLevel: 27, deviceManufacturer: vivo, deviceModel: vivo 1820, deviceName: USYSSW4P9SW8CESC, deviceScreenDensity: 320, deviceScreenSize: 720x1520, deviceUDID: USYSSW4P9SW8CESC, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, noReset: false, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 8.1.0, statBarHeight: 64, takesScreenshot: true, viewportRect: {height: 1372, left: 0, top: 64, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 821607a3-fcdd-41b2-9d19-0a1925c7b709
+*** Element info: {Using=id, value=com.airtel.xsafe:id/title}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second(P0_LoginModule_Test.java:215)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace200452658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace200452658'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LTA1Q5SAYJ&apos;, ip: &apos;192.168.43.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, deviceName: vivo 1820, fullReset: false, newCommandTimeout: 60, noReset: false, platformName: android}, deviceApiLevel: 27, deviceManufacturer: vivo, deviceModel: vivo 1820, deviceName: USYSSW4P9SW8CESC, deviceScreenDensity: 320, deviceScreenSize: 720x1520, deviceUDID: USYSSW4P9SW8CESC, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, noReset: false, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 8.1.0, statBarHeight: 64, takesScreenshot: true, viewportRect: {height: 1372, left: 0, top: 64, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 821607a3-fcdd-41b2-9d19-0a1925c7b709
+*** Element info: {Using=id, value=com.airtel.xsafe:id/title}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second(P0_LoginModule_Test.java:215)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>77</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second()'><b>resendOtpEnableAfter30Second</b><br>Test class: Priority.P0_LoginModule_Test</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LTA1Q5SAYJ&apos;, ip: &apos;192.168.43.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, deviceName: vivo 1820, fullReset: false, newCommandTimeout: 60, noReset: false, platformName: android}, deviceApiLevel: 27, deviceManufacturer: vivo, deviceModel: vivo 1820, deviceName: USYSSW4P9SW8CESC, deviceScreenDensity: 320, deviceScreenSize: 720x1520, deviceUDID: USYSSW4P9SW8CESC, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, noReset: false, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 8.1.0, statBarHeight: 64, takesScreenshot: true, viewportRect: {height: 1372, left: 0, top: 64, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 821607a3-fcdd-41b2-9d19-0a1925c7b709
+*** Element info: {Using=id, value=com.airtel.xsafe:id/title}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second(P0_LoginModule_Test.java:215)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1471364137", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1471364137'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LTA1Q5SAYJ&apos;, ip: &apos;192.168.43.106&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.airtel.xsafesdk.ui.acti..., appPackage: com.airtel.xsafe, automationName: uiautomator2, deviceName: vivo 1820, fullReset: false, newCommandTimeout: 60, noReset: false, platformName: android}, deviceApiLevel: 27, deviceManufacturer: vivo, deviceModel: vivo 1820, deviceName: USYSSW4P9SW8CESC, deviceScreenDensity: 320, deviceScreenSize: 720x1520, deviceUDID: USYSSW4P9SW8CESC, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 60, noReset: false, pixelRatio: 2, platform: LINUX, platformName: Android, platformVersion: 8.1.0, statBarHeight: 64, takesScreenshot: true, viewportRect: {height: 1372, left: 0, top: 64, width: 720}, warnings: {}, webStorageEnabled: false}
+Session ID: 821607a3-fcdd-41b2-9d19-0a1925c7b709
+*** Element info: {Using=id, value=com.airtel.xsafe:id/title}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_LoginModule_Test.resendOtpEnableAfter30Second(P0_LoginModule_Test.java:215)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>79</td>
+<td>Priority.P0_LoginModule_Test@638ef7ed</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.errorMessageCamTest()'><b>errorMessageCamTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1612228258", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1612228258'><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.errorMessageCamTest()'><b>errorMessageCamTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1644929712", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1644929712'><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+<tr>
+<td title='Priority.P0_OnBoarding_Test.errorMessageCamTest()'><b>errorMessageCamTest</b><br>Test class: Priority.P0_OnBoarding_Test</td>
+<td><div><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace126973884", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace126973884'><pre>java.lang.AssertionError: expected [Camera already added] but found [The device has been added by another account]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.android.genericLibrary.WebDriverUtility.assertion(WebDriverUtility.java:232)
+	at Priority.P0_OnBoarding_Test.errorMessageCamTest(P0_OnBoarding_Test.java:381)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>51</td>
+<td>Priority.P0_OnBoarding_Test@4c5ae43b</td></tr>
+</table><p>
+</body>
+</html>
